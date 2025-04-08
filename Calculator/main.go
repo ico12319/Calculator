@@ -3,6 +3,7 @@ package main
 import (
 	"Calculator/expression"
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -17,4 +18,9 @@ func main() {
 	fmt.Println(calc.Evaluate())
 	fmt.Println(calc2.Evaluate())
 	fmt.Println(calc3.Evaluate())
+
+	div := expression.NewExponentiation(expression.NewNumberSingleton(2), expression.NewNumberSingleton(-2))
+	fmt.Println(div.Eval())
+
+	fmt.Println(math.Pow(2.5, 2.5))
 }
